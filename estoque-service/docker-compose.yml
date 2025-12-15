@@ -1,0 +1,15 @@
+services:
+
+  db-estoque:
+    image: postgres:alpine3.21
+    container_name: postgres-estoque
+    restart: unless-stopped
+    shm_size: 128mb
+    volumes:
+      - pgdata-estoque:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    env_file:
+      - .env
+volumes:
+  pgdata-estoque:
+
