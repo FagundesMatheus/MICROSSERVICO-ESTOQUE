@@ -4,10 +4,7 @@ from getEstoqueProduto import getEstoqueProduto
 from removeEstoque import removeEstoque
 
 
-def postReserva(idproduto:int, idpedido:int, quantidade:int, session=None):
-    if session is None:
-        session = get_session()
-        return postReserva(idproduto, idpedido, quantidade, session)
+def postReserva(idproduto:int, idpedido:int, quantidade:int, session):
 
     produto = getEstoqueProduto(idproduto, session)
     if produto.quantidade < quantidade:
@@ -18,4 +15,3 @@ def postReserva(idproduto:int, idpedido:int, quantidade:int, session=None):
     session.add(reserva)
 
     removeEstoque(idproduto, quantidade, session)
-    session.commit()
