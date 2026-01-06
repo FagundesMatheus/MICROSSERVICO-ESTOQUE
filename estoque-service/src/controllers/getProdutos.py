@@ -3,6 +3,13 @@ from src.model import Produto
 
 
 def getProdutos(session):
-
-    return session.query(Produto).all()
+    produtos = session.query(Produto).all()
+    return [
+        {
+            "id": p.id,
+            "nome": p.nome,
+            "descricao": p.descricao
+        }
+        for p in produtos
+    ]
 
