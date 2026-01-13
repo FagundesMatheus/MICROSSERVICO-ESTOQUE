@@ -1,7 +1,7 @@
 from src.database import get_session
 from src.model import Reserva
-from getReserva import getReservasPedido, getReservaPedidoProduto
-from addEstoque import addEstoque
+from src.controllers.getReserva import getReservasPedido, getReservaPedidoProduto
+from src.controllers.addEstoque import addEstoque
 
 
 def deleteReservasPedido(idPedido:int, devolverEstoque:bool, session):

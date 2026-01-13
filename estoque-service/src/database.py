@@ -8,7 +8,7 @@ database_url = os.getenv('DATABASE_URL')
 
 
 #url para testes
-database_url = "postgresql+psycopg2://postgres:1234@localhost:5432/MS-Estoque"
+#database_url = "postgresql+psycopg2://postgres:1234@localhost:5432/MS-Estoque"
 
 engine = create_engine(database_url)
 

@@ -10,6 +10,34 @@ services:
       - ./init-scripts:/docker-entrypoint-initdb.d
     env_file:
       - .env
+    networks:
+      - estoque-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  estoque-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: estoque-service
+    restart: unless-stopped
+    ports:
+      - "5001:5000"
+    env_file:
+      - .env
+    depends_on:
+      db-estoque:
+        condition: service_healthy
+    networks:
+      - estoque-network
+
 volumes:
   pgdata-estoque:
+
+networks:
+  estoque-network:
+    driver: bridge
 
