@@ -1,4 +1,3 @@
-from src.database import get_session
 from src.model import Reserva
 from src.controllers.getReserva import getReservasPedido, getReservaPedidoProduto
 from src.controllers.addEstoque import addEstoque

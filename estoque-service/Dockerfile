@@ -31,5 +31,5 @@ EXPOSE 5000
 
 # Comando de produção
 ENV PYTHONPATH="/app"
-CMD ["gunicorn", "--chdir", "/app", "-b", "0.0.0.0:5000", "-w", "4", "--threads", "2", "--timeout", "60", "src.main:app"]
+CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "--chdir", "/app", "-b", "0.0.0.0:5000", "-w", "4", "--timeout", "60", "src.main:app"]
 

@@ -1,4 +1,3 @@
-from src.database import get_session
 from src.model import Estoque
 
 def removeEstoque(id:int, quantidade:int, session):
