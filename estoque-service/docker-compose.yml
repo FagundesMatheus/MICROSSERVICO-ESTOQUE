@@ -28,6 +28,8 @@ services:
       - "5001:5000"
     env_file:
       - .env
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://${USER_ESTOQUE}:${USER_PASS}@db-estoque:5432/${POSTGRES_DB}
     depends_on:
       db-estoque:
         condition: service_healthy
