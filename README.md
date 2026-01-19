@@ -211,7 +211,7 @@ Matheus Fagundes - matheus.fagundes0424@gmail.com
 [license-shield]: https://img.shields.io/github/license/FagundesMatheus/MICROSSERVICO-ESTOQUE.svg?style=for-the-badge
 [license-url]: https://github.com/FagundesMatheus/MICROSSERVICO-ESTOQUE/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/matheus-fagundes-soares-507210315
 <!-- Links utilizados -->
 [FastAPI]: https://img.shields.io/badge/FastAPI-3776AB?style=for-the-badge&logo=fastapi&logoColor=white
 [FastAPI-url]: https://fastapi.tiangolo.com/
