@@ -32,15 +32,6 @@ def get_db() -> Generator:
 
 app = FastAPI(title="estoque-service", version="0.1.0")
 
-# Add conservative CORS policy for production; adjust origins as needed
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
-    allow_headers=["*"],
-)
-
 
 @app.exception_handler(ValueError)
 def value_error_handler(request, exc: ValueError):
